@@ -120,7 +120,7 @@ MCP error -32602: Structured content does not match the tool's output schema:
 data/data must be array
 ```
 
-**复现率**：3/3，与账户状态无关，只与"当前没有可领券"有关。
+**复现条件**（2026-10-18 实测）：从 `tools/list` 读到的 `outputSchema` 中，`data` 声明为 `type: array`（`items` 要求 `couponName`/`couponStatus`/`label`）；而账户无待领券时，响应 `structuredContent.data` 为 `null`，同时带 `code: 499` 与 `No coupons available`。两个事实并存，任何执行 schema 校验的客户端都会拒绝该响应。
 
 **根因**（读原始响应确认）：该工具的 `outputSchema` 声明 `data` 为 array，但当会员没有可领券时，服务端返回的是
 
