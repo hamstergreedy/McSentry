@@ -1,0 +1,27 @@
+# --- secrets: never commit ---
+.env
+*.token
+token.txt
+
+# --- runtime output ---
+reports/
+out/
+*.log
+
+# --- python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- editors / os ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- workbuddy local state ---
+.workbuddy/

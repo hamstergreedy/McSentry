@@ -1,0 +1,170 @@
+{
+  "_note": "演示数据 / DEMO FIXTURE — 人为构造，用于在没有 MCP Token 的环境下演示完整链路。账户数字、券和奖品均为虚构；只有 catalogue（积分商城商品）来自 2026-10-18 的公开商城快照，用于让积分估值可被复算。请勿将其视为任何真实账户信息。",
+  "source": "fixture",
+  "taken_at": "2026-10-18 19:00:00",
+  "account": {
+    "accountId": "DEMO-0000-0000-0000-000000000000",
+    "currency": "麦享会积分",
+    "availablePoint": "1820",
+    "accumulativePoint": "5460",
+    "usedPoint": "2140",
+    "expiredPoint": "1500",
+    "frozenPoint": "0",
+    "currentMouthExpirePoint": "640",
+    "nextMouthExpirePoint": "300",
+    "lastMouthExpirePoint": "120"
+  },
+  "coupons": [
+    { "name": "下单立减3元券", "expiry": "2026-10-21 23:59:59" },
+    { "name": "麦辣三件套5折券", "expiry": "2026-10-27 23:59:59" },
+    { "name": "甜辣小食组合5折券", "expiry": null }
+  ],
+  "claimable": ["下单立减2元券", "薯条买一送一券", "麦旋风立减5元券"],
+  "lottery": {
+    "status": { "code": "SUCCESS", "message": "成功" },
+    "activityCode": "dtx2",
+    "activityName": "麦麦积分抽奖",
+    "activityStatusText": "进行中",
+    "beginTime": "2025-01-26 00:00:00",
+    "endTime": "2030-12-31 23:59:59",
+    "drawPoint": "24",
+    "drawTypeText": "先消耗次数再消耗积分抽奖",
+    "availableTimes": 2,
+    "availablePoint": "1820",
+    "drawDecision": {
+      "resourceEligible": true,
+      "reason": null,
+      "nextConsumption": { "type": "CHANCES", "points": "0", "chances": 2, "text": "本次将消耗 1 次机会" },
+      "fallbackConsumption": null
+    },
+    "prizes": [
+      { "name": "下单立减3元券", "typeText": "优惠券" },
+      { "name": "麦辣三件套5折券", "typeText": "优惠券" },
+      { "name": "30积分", "typeText": "积分奖" }
+    ]
+  },
+  "prizes": [
+    {
+      "id": "demo-prize-1",
+      "name": "甜辣小食组合5折券",
+      "prizeType": 1,
+      "recordTime": "2026-10-15 12:31:00",
+      "status": 1,
+      "statusText": "待领取",
+      "timeRemindText": "中奖后 7 天内领取"
+    }
+  ],
+  "orders": [
+    {
+      "orderId": "DEMO-ORDER-0001",
+      "orderType": "到店取餐",
+      "createTime": "2026-10-16 08:12:33",
+      "storeName": "麦当劳（示例门店）",
+      "orderStatus": "已完成",
+      "realTotalAmount": "19.9"
+    },
+    {
+      "orderId": "DEMO-ORDER-0002",
+      "orderType": "麦乐送",
+      "createTime": "2026-10-12 18:40:05",
+      "storeName": "麦当劳（示例门店）",
+      "orderStatus": "已完成",
+      "realTotalAmount": "42.5"
+    }
+  ],
+  "catalogue": [
+    {
+      "name": "6.9元可乐麦炫酷",
+      "point": 50,
+      "price": 6.9,
+      "category": "到店专用",
+      "status": 2,
+      "up_time": "2026-06-25 00:00:03",
+      "down_time": "2026-12-30 23:59:59"
+    },
+    {
+      "name": "6.9元香芋派/菠萝派任选",
+      "point": 50,
+      "price": 6.9,
+      "category": "到店专用",
+      "status": 2,
+      "up_time": "2026-06-25 00:00:00",
+      "down_time": "2026-12-30 23:59:59"
+    },
+    {
+      "name": "10.9元指定小食任选1份",
+      "point": 100,
+      "price": 10.9,
+      "category": "到店专用",
+      "status": 2,
+      "up_time": "2026-06-25 00:00:00",
+      "down_time": "2026-12-30 23:59:59"
+    },
+    {
+      "name": "16.9元麦辣可乐组合",
+      "point": 500,
+      "price": 16.9,
+      "category": "到店专用",
+      "status": 2,
+      "up_time": "2026-06-25 00:00:03",
+      "down_time": "2026-12-30 23:59:59"
+    },
+    {
+      "name": "17.9元板烧可乐组合",
+      "point": 500,
+      "price": 17.9,
+      "category": "到店专用",
+      "status": 2,
+      "up_time": "2026-06-25 00:00:00",
+      "down_time": "2026-12-30 23:59:59"
+    },
+    {
+      "name": "21.9元巨无霸可乐组合",
+      "point": 800,
+      "price": 21.9,
+      "category": "到店专用",
+      "status": 2,
+      "up_time": "2026-06-25 00:00:03",
+      "down_time": "2026-12-30 23:59:59"
+    },
+    {
+      "name": "18.8元板烧鸡腿堡两件套",
+      "point": 100,
+      "price": 18.8,
+      "category": "到店专用",
+      "status": 2,
+      "up_time": "2024-12-31 11:45:00",
+      "down_time": "2026-03-21 23:59:59"
+    },
+    {
+      "name": "28.8元巨无霸四件套",
+      "point": 800,
+      "price": 28.8,
+      "category": "到店专用",
+      "status": 2,
+      "up_time": "2024-03-26 00:00:00",
+      "down_time": "2026-03-21 23:59:59"
+    },
+    {
+      "name": "程序员节派对",
+      "point": 0,
+      "price": 59,
+      "category": "品鉴会",
+      "status": 2,
+      "up_time": "2026-10-17 10:30:00",
+      "down_time": "2026-10-25 23:49:59"
+    }
+  ],
+  "probes": [
+    { "tool": "now-time-info", "ok": true, "empty": false, "note": "fixture" },
+    { "tool": "query-my-account", "ok": true, "empty": false },
+    { "tool": "query-my-coupons", "ok": true, "empty": false },
+    { "tool": "available-coupons", "ok": true, "empty": false },
+    { "tool": "query-lottery-info", "ok": true, "empty": false },
+    { "tool": "query-my-prizes", "ok": true, "empty": false },
+    { "tool": "order-list", "ok": true, "empty": false },
+    { "tool": "mall-points-products", "ok": true, "empty": false },
+    { "tool": "campaign-calendar", "ok": true, "empty": false }
+  ],
+  "unparsed": {}
+}
