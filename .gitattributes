@@ -1,0 +1,9 @@
+# 统一使用 LF，避免 Windows 下 checkout 时被转成 CRLF 改变文件字节
+# CONTEST_DECLARATION.md 要求与官方原文逐字一致，换行符也不可变动
+* text=auto eol=lf
+
+# 以下按二进制处理，禁止任何换行转换
+*.png binary
+*.jpg binary
+*.ico binary
+*.pdf binary
